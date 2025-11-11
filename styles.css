@@ -314,16 +314,20 @@ button[type="submit"]:hover {
 
 .pie-pagina__logo {
   display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
+  align-items: center; /* Mantiene el logo y texto alineados */
   text-decoration: none;
 }
 
 .logo-imagen-pie {
   height: 2.5rem; /* 40px */
-  margin-right: 0.625rem; /* 10px */
+  margin-right: 0.625rem; /* Espacio entre logo y texto */
+}
+
+.logo-texto {
+  font-family: "Titulos", sans-serif;
+  font-size: 2.5rem; /* Tamaño del texto */
+  color: #fff;
+  margin-top: 0.3rem; /* Ajusta hacia abajo */
 }
 
 .logo__resaltado {

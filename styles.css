@@ -24,7 +24,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding-top: 5rem; /* Ajusta según la altura real del header */
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -35,17 +35,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.625rem 2rem; /* 10px */
+  padding: 0.625rem 2rem; /* 10px y 32px en rem ya definido */
   background-color: white;
-  position: relative;
+  position: fixed; /* Fijo para que siempre esté visible */
+  top: 0; /* Siempre arriba */
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 .logo img {
   height: 3.125rem; /* 50px */
 }
 
-/* Contenedor del menú a la derecha */
+/* Menú horizontal */
 .menu-horizontal {
   display: flex;
   gap: 1.875rem; /* 30px */
@@ -345,13 +349,15 @@ button[type="submit"]:hover {
 }
 
 .pie-pagina__red-social {
-  font-size: 1.8rem;
-  color: #d21e3d;
-  transition: color 0.3s;
+  font-size: 1.8rem; /* Tamaño del icono */
+  color: #d21e3d; /* Color inicial */
+  transition: color 0.3s ease,
+    /* Transición suave de color */ transform 0.3s ease; /* Transición suave de movimiento */
 }
 
 .pie-pagina__red-social:hover {
-  color: #fff;
+  color: #fff; /* Color al pasar el cursor */
+  transform: translateY(-3px); /* Pequeño efecto de elevación */
 }
 
 .pie-pagina__navegacion ul {

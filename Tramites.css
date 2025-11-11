@@ -1,0 +1,414 @@
+/* ======================
+   FONTS
+====================== */
+@font-face {
+  font-family: "Titulos";
+  src: url("Fonts/Titulos.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Texto";
+  src: url("Fonts/montserrat.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ======================
+     RESET BÁSICO
+  ====================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 5rem; /* Ajusta según altura del header */
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ======================
+     HEADER Y MENÚ
+  ====================== */
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 2rem;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 3.125rem;
+}
+
+.menu-horizontal {
+  display: flex;
+  gap: 1.875rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu-horizontal li {
+  position: relative;
+}
+
+.menu-horizontal li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-horizontal li a:hover {
+  color: #888;
+}
+
+.menu-vertical {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ddd;
+  list-style: none;
+  padding: 0.5rem 0;
+  width: 12rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.menu-horizontal li:hover .menu-vertical {
+  display: block;
+}
+
+.menu-vertical li a {
+  display: block;
+  padding: 1rem;
+  color: black;
+}
+
+.menu-vertical li a:hover {
+  background-color: #ccc;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ======================
+     PIE DE PÁGINA
+  ====================== */
+.pie-pagina {
+  background-color: #111;
+  color: #fff;
+  font-family: "Texto", sans-serif;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.pie-pagina__contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 2rem;
+  align-items: start;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.pie-pagina__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pie-pagina__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-imagen-pie {
+  height: 2.5rem;
+  margin-right: 0.625rem;
+}
+
+.logo-texto {
+  font-family: "Titulos", sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-top: 0.3rem;
+}
+
+.logo__resaltado {
+  color: #d21e3d;
+}
+
+.pie-pagina__descripcion {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pie-pagina__redes {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.pie-pagina__red-social {
+  font-size: 1.8rem;
+  color: #d21e3d;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.pie-pagina__red-social:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.pie-pagina__navegacion ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pie-pagina__navegacion li {
+  margin: 0.5rem 0;
+}
+
+.pie-pagina__navegacion a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.pie-pagina__navegacion a:hover {
+  color: #d21e3d;
+}
+
+.pie-pagina__subtitulo {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.625rem;
+}
+
+.pie-pagina__contacto-info p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.pie-pagina__contacto-info i {
+  color: #d21e3d;
+  margin-right: 0.375rem;
+}
+
+.pie-pagina__derechos {
+  border-top: 0.0625rem solid #333;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.pie-pagina__enlaces-legales {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3125rem;
+}
+
+.pie-pagina__enlace-legal {
+  color: #d21e3d;
+  text-decoration: none;
+}
+
+.pie-pagina__enlace-legal:hover {
+  text-decoration: underline;
+}
+
+/* ======================
+     SECCIÓN TÉRMINOS Y CONDICIONES
+  ====================== */
+.seccion-terminos {
+  padding: 5rem 2rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 56.25rem;
+  margin: 0 auto;
+  font-family: "Texto", sans-serif;
+}
+
+.seccion-terminos__titulo {
+  font-size: 2.8rem;
+  color: #d21e3d;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-family: "Titulos", sans-serif;
+}
+
+.seccion-terminos__fecha-revision {
+  text-align: right;
+  font-style: italic;
+  color: #7a7a7a;
+  color: var(--gray-text-color);
+  margin-top: 50px;
+  font-size: 0.95rem;
+}
+
+.seccion-terminos__apartado {
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.seccion-terminos__apartado:hover {
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  border-color: #d21e3d;
+}
+
+.seccion-terminos__subtitulo {
+  font-size: 1.8rem;
+  color: #d21e3d;
+  margin-bottom: 1rem;
+  border-bottom: 0.0625rem solid #f0c0c5;
+  padding-bottom: 0.3125rem;
+  font-family: "Titulos", sans-serif;
+}
+
+.seccion-terminos p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-size: 1.125rem;
+}
+
+.seccion-terminos ul {
+  list-style: disc;
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.seccion-terminos ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.boton-primario {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3125rem; /* 5px */
+  background: #111; /* secondary-color */
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); /* 4px 15px */
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  width: 100%;
+}
+
+.boton-primario::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #d21e3d; /* primary-color */
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  left: auto;
+  right: auto;
+}
+
+.boton-primario:hover::after {
+  right: auto;
+  left: auto;
+  width: 100%;
+}
+
+.boton-primario span {
+  text-align: center;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem; /* 12px 20px */
+  color: #fff; /* white-color */
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px */
+}
+
+.boton-primario:hover span {
+  color: #111; /* secondary-color */
+}
+
+/* ======================
+     RESPONSIVE
+  ====================== */
+@media (max-width: 48rem) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-horizontal {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .menu-horizontal.active {
+    display: flex;
+  }
+
+  .menu-horizontal li {
+    border-bottom: 0.0625rem solid #ccc;
+  }
+
+  .seccion-terminos {
+    padding: 3rem 1.5rem;
+  }
+
+  .seccion-terminos__titulo {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .seccion-terminos__subtitulo {
+    font-size: 1.5rem;
+  }
+
+  .seccion-terminos p,
+  .seccion-terminos ul li {
+    font-size: 1rem;
+  }
+
+  .seccion-terminos__apartado {
+    padding: 1rem 1.25rem;
+  }
+}

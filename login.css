@@ -1,0 +1,137 @@
+/* ======================
+   LOGIN – MEJORADO
+====================== */
+
+/* Contenedor principal: centra el formulario con fondo degradado */
+.login-container {
+  position: fixed; /* para que cubra toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e2dfdf 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  font-family: "Texto", sans-serif;
+}
+
+/* Caja del formulario */
+.login-box {
+  background: white;
+  padding: 2.5rem; /* 40px */
+  border-radius: 1rem; /* 16px */
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 28rem; /* 448px */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.login-box h2 {
+  font-family: "Titulos", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #d21e3d;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  font-family: "Texto", sans-serif;
+}
+
+.input-group input {
+  width: 100%; /* Mantiene responsivo dentro del contenedor */
+  max-width: 25rem; /* Limita ancho máximo a 400px */
+  margin: 0 auto; /* Centra los inputs dentro de la caja */
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: "Texto", sans-serif;
+  transition: all 0.3s ease;
+  display: block; /* Necesario para que margin:auto funcione */
+}
+
+.input-group input:focus {
+  border-color: #d21e3d;
+  box-shadow: 0 0 0.5rem rgba(210, 30, 61, 0.3);
+  outline: none;
+}
+
+/* Botón */
+.login-button {
+  width: 100%;
+  padding: 0.75rem 0;
+  border: none;
+  border-radius: 0.625rem; /* 10px */
+  background-color: #d21e3d;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Texto", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.login-button:hover {
+  background-color: #b01b2e;
+  transform: translateY(-2px);
+}
+
+/* Enlace secundario (olvidé contraseña) */
+.login-box .login-link {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #2575fc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.login-box .login-link:hover {
+  color: #0e63e2;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    height: auto;
+    min-height: calc(100vh - 6.5rem);
+    padding: 3rem 1rem 1rem 1rem;
+    align-items: flex-start;
+  }
+
+  .login-box {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .login-box h2 {
+    text-align: left;
+    font-size: 1.8rem;
+  }
+
+  .input-group input {
+    padding: 1rem;
+  }
+}

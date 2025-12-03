@@ -22,8 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const apellido = form.elements["apellidos"].value.trim();
     const email = form.elements["email"].value.trim();
     const telefono = form.elements["telefono"].value.trim();
+    const pais = form.elements["pais"].value;
 
-    if (!nombre || !apellido || !email || !telefono) {
+    if (!nombre || !apellido || !email || !telefono || !pais) {
       alert("Por favor, complete todos los campos obligatorios.");
       return;
     }

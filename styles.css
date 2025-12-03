@@ -24,7 +24,7 @@
 
 body {
   margin: 0;
-  padding-top: 5rem; /* Ajusta según la altura real del header */
+  padding-top: 6.5rem; /* Ajusta según la altura real del header */
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -41,7 +41,7 @@ body {
   top: 0; /* Siempre arriba */
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
@@ -57,6 +57,7 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
+  z-index: 100;
 }
 
 /* Posicionamiento de cada item */
@@ -497,4 +498,34 @@ button[type="submit"]:hover {
     margin: 10px 0;
     text-align: center;
   }
+}
+
+/* ======================
+   CONTROL SELECT PAÍS
+====================== */
+select {
+  max-height: 200px; /* evita que sea gigante */
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+select:focus {
+  outline: none;
+}
+
+input,
+select,
+textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.5rem;
+}
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 30px;
 }

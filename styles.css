@@ -470,3 +470,31 @@ button[type="submit"]:hover {
     height: 15.625rem; /* 250px */
   }
 }
+
+/* ======================
+   BOTÓN LOGIN
+====================== */
+
+.btn-login {
+  background-color: black;
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid black;
+}
+
+.btn-login:hover {
+  background-color: white;
+  color: black !important;
+  border: 2px solid black;
+}
+
+@media (max-width: 48rem) {
+  .btn-login {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
